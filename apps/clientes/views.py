@@ -11,7 +11,6 @@ from .models import Cliente
 # Create your views here.
 
 @login_required
- 
 def novo_cliente(request):
     clientes = Cliente.objects.all()
     template_name = 'novo_cliente.html'
@@ -74,11 +73,11 @@ def login_usuario(request):
             if usuario is not None:
                 login(request, usuario)
                 return redirect('novo_cliente')
-            else:
-                return HttpResponse('<h1>Usuário ou senha inválidos<h1>')
         else:
+                return HttpResponse('<h1>Usuário ou senha inválidos<h1>')
+    else:
             form = AuthenticationForm()
             context = {
                 'form': form
             }
-        return render(request, template_name, context)
+    return render(request, template_name, context)
