@@ -15,7 +15,7 @@ class ClienteForm(forms.ModelForm):
 
 
 class UsuarioForm(forms.ModelForm):
-    first_nome = forms.CharField(label='nome', widget=forms.TextInput(attrs={"class":"form-control"}))
+    first_name = forms.CharField(label='nome', widget=forms.TextInput(attrs={"class":"form-control"}))
     last_name =forms.CharField(label=' sobrenome' ,widget=forms.TextInput(attrs={"class":"form-control"}))
     username = forms.CharField(label= 'usuario' ,widget=forms.TextInput(attrs={"class":"form-control"}))
     password = forms.CharField(label='Senha', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
