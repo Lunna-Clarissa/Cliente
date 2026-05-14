@@ -18,8 +18,8 @@ class UsuarioForm(forms.ModelForm):
     first_nome = forms.CharField(label='nome', widget=forms.TextInput(attrs={"class":"form-control"}))
     last_name =forms.CharField(label=' sobrenome' ,widget=forms.TextInput(attrs={"class":"form-control"}))
     username = forms.CharField(label= 'usuario' ,widget=forms.TextInput(attrs={"class":"form-control"}))
-    password = forms.CharField(label=' senha' , widget=forms.PasswordInput(attrs={"class":"form-control"}))
+    password = forms.CharField(label='Senha', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'password ']
+        fields = ['first_name', 'last_name', 'username', 'password']
