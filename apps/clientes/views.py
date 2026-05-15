@@ -60,7 +60,7 @@ def excluir_cliente(request, id):
       cliente.delete()
     except Cliente.DoesNotExist:
       return HttpResponse('<h1>erro ao excluir o cliente.nao encontrado</h1>')
-    return redirect ('novo cliente')
+    return redirect ('novo_cliente')
 
 def login_usuario(request):
     template_name = 'login.html'
