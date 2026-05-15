@@ -6,7 +6,12 @@
     </head>
  
     <body>
-        <div class="container"><</div>
+        <div class="container">
+             <nav class="navbar bg-body-tertiary">
+               <form class="container-fluid justify-content-start">
+                 <a href="{% url 'sair' %}" class="btn btn-outline-success me-2" type="button">Sair</a>
+               </form>
+            </nav>
         <form method="post">
         {% csrf_token %}
  
@@ -26,6 +31,7 @@
                     <th>Nome</th>
                     <th>CPF</th>
                     <th>Telefone</th>
+                    <th>Nascimento</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -46,5 +52,6 @@
                 {% endfor %}
             </tbody>
         </table>
+        </div>
     </body>
 </html>
